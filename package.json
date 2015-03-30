@@ -32,7 +32,11 @@
     "ember-export-application-global": "^1.0.2"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-cropper",
+    "ember-cropper",
+    "image-cropper",
+    "cropper"
   ],
   "dependencies": {
     "ember-cli-babel": "^4.0.0"
