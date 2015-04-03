@@ -1,4 +1,4 @@
-# Ember CLI Cropper
+# Ember CLI Cropper [![Build Status](https://travis-ci.org/mhretab/ember-cli-cropper.svg?branch=master)](https://travis-ci.org/mhretab/ember-cli-cropper)
 
 This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component. 
 
