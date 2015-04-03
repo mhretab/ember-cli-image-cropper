@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-cropper",
-  "version": "0.0.0",
-  "description": "Ember Cropper",
+  "version": "0.0.1",
+  "description": "An Ember CLI addon that wraps the jQuery Cropper into an ember component.",
   "directories": {
     "doc": "doc",
     "test": "tests"
