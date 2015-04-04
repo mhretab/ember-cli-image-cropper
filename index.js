@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-cropper',
+  name: 'ember-cli-image-cropper',
 
   included: function(app) {
       this._super.included(app);
