@@ -36,8 +36,8 @@ export default ImageCropper.extend({
   actions: {
     getCroppedCanvas: function() {
       var container = this.$(this.get('cropperContainer'));
-      var croppedImage = container.cropper('getCroppedCanvas');
-      this.set('croppedImage', croppedImage);
+      var croppedImage = conatainer.cropper('getCroppedCanvas');
+      this.set('croppedAvatar', croppedImage);
     }
   }
 });
@@ -83,4 +83,4 @@ zoomin: null,
 zoomout: null,
 ```
 
-PS. This is a fresh project so feel free to report issues, discussion and PRs
+NOTE: This is a fresh project so feel free to report issues, discussion and PRs
