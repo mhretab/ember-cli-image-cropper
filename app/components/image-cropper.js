@@ -1,3 +1,3 @@
-import imageCropper from 'ember-cli-cropper/components/image-cropper';
+import imageCropper from 'ember-cli-image-cropper/components/image-cropper';
 
 export default imageCropper;

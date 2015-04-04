@@ -1,4 +1,4 @@
-# Ember CLI Cropper [![Build Status](https://travis-ci.org/mhretab/ember-cli-cropper.svg?branch=master)](https://travis-ci.org/mhretab/ember-cli-cropper)
+# Ember CLI Image Cropper [![Build Status](https://travis-ci.org/mhretab/ember-cli-image-cropper.svg?branch=master)](https://travis-ci.org/mhretab/ember-cli-image-cropper)
 
 This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component. 
 
@@ -9,7 +9,7 @@ It requires cropper and jQuery [ImagesLoaded](https://github.com/desandro/images
 
 ```sh
 # install via ember-cli
-$ ember install:addon ember-cli-cropper
+$ ember install:addon ember-cli-image-cropper
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ An example below show how to extend the component and get the croped canvas area
 
 ```javascript
 // app/components/avatar-cropper.js
-import ImageCropper from 'ember-cli-cropper/components/image-cropper';
+import ImageCropper from 'ember-cli-image-cropper/components/image-cropper';
 
 export default ImageCropper.extend({
   //override default options of cropper
@@ -83,4 +83,4 @@ zoomin: null,
 zoomout: null,
 ```
 
-PS. This is a fresh project so feel free to report issues, discussion and PRs :)
+PS. This is a fresh project so feel free to report issues, discussion and PRs
