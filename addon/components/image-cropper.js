@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   layout: layout,
 
   //cropper configs
-  previewClass: 'cropper-preview',
+  previewClass: '.cropper-preview',
   cropperContainer: '.cropper-container > img',
   aspectRatio: 16 / 9,
   crop: null,
