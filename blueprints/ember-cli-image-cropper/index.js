@@ -10,7 +10,7 @@ module.exports = {
   afterInstall: function(options) {
     var _this = this;
     
-    return this.addBowerPackageToProject('imageLoader').then(function(){
+    return this.addBowerPackageToProject('imageloader').then(function(){
       return _this.addBowerPackageToProject('cropper');
     });
   }
