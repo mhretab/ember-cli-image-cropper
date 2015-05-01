@@ -14,7 +14,6 @@ export default imageCropper.extend({
       var container = this.$(this.get('cropperContainer'));
       var croppedImage = container.cropper('getCroppedCanvas');
       this.set('croppedAvatar', croppedImage);
-      Ember.Logger.warn(croppedImage);
     }
   }
 });
