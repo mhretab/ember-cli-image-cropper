@@ -1,0 +1,17 @@
+<div class="cropper">
+  <div class="cropper-container" style="width:400px;">
+    <img src={{image}} width="400px">
+  </div>
+  <div class="preview">
+    <div class="img-preview"></div>
+    Preview
+  </div>
+  <div class="cropped">
+    <div class="cropped-avatar">
+      {{croppedAvatar}}
+    </div>
+    Cropped Avatar
+  </div>
+</div>
+
+<button {{action "getCroppedAvatar"}}>Crop Avatar</button>
