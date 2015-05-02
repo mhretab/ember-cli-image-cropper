@@ -10,6 +10,13 @@ body {
 
 header {
   padding-bottom: 16px;
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 h1,
