@@ -3,12 +3,7 @@
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var app = new EmberAddon({
-  lessOptions: {
-    paths: ['tests/dummy/app/styles/'],
-    outputFile: 'dummy.css'
-  }
-});
+var app = new EmberAddon();
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
