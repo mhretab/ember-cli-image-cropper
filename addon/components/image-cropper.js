@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import layout from '../templates/components/image-cropper';
 
 export default Ember.Component.extend({
   //cropper configs
@@ -36,10 +35,8 @@ export default Ember.Component.extend({
   zoomout: null,
 
   //initialize cropper on did insert element
-  initImageCropper: Ember.on('didInsertElement', function() {
+  initImageCropper: Ember.on('didRender', function() {
     var _this = this;
-
-    _this.$().imagesLoaded(function() {
       _this.$(_this.get('cropperContainer')).cropper({
         aspectRatio: _this.get('aspectRatio'),
         crop: _this.get('crop'),
@@ -72,6 +69,5 @@ export default Ember.Component.extend({
         zoomin: _this.get('zoomin'),
         zoomout: _this.get('zoomout')
       });
-    });
   })
 });

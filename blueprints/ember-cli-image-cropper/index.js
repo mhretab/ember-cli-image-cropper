@@ -9,9 +9,6 @@ module.exports = {
 
   afterInstall: function(options) {
     var _this = this;
-    
-    return this.addBowerPackageToProject('imageloader').then(function(){
-      return _this.addBowerPackageToProject('cropper');
-    });
+    return _this.addBowerPackageToProject('cropper');
   }
 };

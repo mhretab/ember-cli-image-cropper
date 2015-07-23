@@ -2,10 +2,18 @@
 
 This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component. 
 
-It requires cropper and jQuery [ImagesLoaded](https://github.com/desandro/imagesloaded) 
+It requires cropper 
 
 ## Installation
 
+For ember-cli 1.13.1 and above. use ember-cli-image-cropper version 0.0.7 and beyond. To install it just use
+
+```sh
+# install via ember-cli
+$ ember install ember-cli-image-cropper
+
+```
+For ember-cli 0.2.7 and below use ember-cli-image-cropper version 0.0.6 and install it using:
 
 ```sh
 # install via ember-cli
