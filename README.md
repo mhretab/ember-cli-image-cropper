@@ -62,9 +62,10 @@ previewClass: '.cropper-preview',
 cropperContainer: '.cropper-container > img',
 aspectRatio: 16 / 9,
 crop: null,
-strict: true,
+viewMode: 0, // default crop box is within the container other options (1,2,3) check cropper documentation for more.
+dragMode: 'crop',  // default crop. other options are 'move' and 'none'
 responsive: true,
-checkImageOrigin: true,
+checkCrossOrigin: true,
 background: true,
 modal: true,
 guides: true,
@@ -75,8 +76,9 @@ dragDrop: true,
 movable: true,
 resizable: true,
 zoomable: true,
-mouseWheelZoom: true,
-touchDragZoom: true,
+zoomOnWheel: true,
+zoomOnTouch: true,
+toggleDragModeOnDblclick: true,
 rotateable: true,
 minContainerWidth: 200,
 minContainerHeight: 100,
@@ -90,5 +92,4 @@ dragEnd: null,
 zoomin: null,
 zoomout: null,
 ```
-
-NOTE: This is a fresh project so feel free to report issues, discussion and PRs
+For more options and methods, please check cropper's [readd me](https://github.com/fengyuanchen/cropper#options_).
