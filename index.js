@@ -7,7 +7,10 @@ module.exports = {
   included: function(app) {
       this._super.included(app);
 
-      app.import(app.bowerDirectory + '/cropper/dist/cropper.min.js');
+      if (process.env.EMBER_CLI_FASTBOOT !== 'true') {
+        app.import(app.bowerDirectory + '/cropper/dist/cropper.min.js');
+      }
+
       app.import(app.bowerDirectory + '/cropper/dist/cropper.min.css');
   }
 };
