@@ -79,5 +79,12 @@ export default Ember.Component.extend({
         zoomin: _this.get('zoomin'),
         zoomout: _this.get('zoomout')
       });
+  }),
+
+  teardownCropper: Ember.on('willDestroyElement', function() {
+    let cropperElment = this.$(this.get('cropperContainer'));
+    if(cropperElment.data('cropper')) {
+      cropperElment.cropper.destroy();
+    }
   })
 });
