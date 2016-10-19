@@ -84,7 +84,7 @@ export default Ember.Component.extend({
   teardownCropper: Ember.on('willDestroyElement', function() {
     let cropperElment = this.$(this.get('cropperContainer'));
     if(cropperElment.data('cropper')) {
-      cropperElment.cropper.destroy();
+      cropperElment.cropper('destroy');
     }
   })
 });
