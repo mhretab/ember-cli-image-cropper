@@ -92,4 +92,4 @@ dragEnd: null,
 zoomin: null,
 zoomout: null,
 ```
-For more options and methods, please check cropper's [readd me](https://github.com/fengyuanchen/cropper#options_).
+For more options and methods, please check cropper's [README](https://github.com/fengyuanchen/cropper#options_).
