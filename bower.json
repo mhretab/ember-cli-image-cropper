@@ -1,11 +1,6 @@
 {
-  "name": "ember-cli-image-cropper",
-  "dependencies": {
-    "ember": "~2.9.0",
-    "ember-cli-shims": "0.1.1",
-    "ember-qunit-notifications": "0.1.0"
-  },
-  "devDependencies": {
-    "cropper": "^2.3.2"
-  }
+    "name": "ember-cli-image-cropper",
+    "devDependencies": {
+        "cropper": "^2.3.4"
+    }
 }
