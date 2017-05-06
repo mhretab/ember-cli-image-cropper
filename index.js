@@ -4,13 +4,18 @@
 module.exports = {
   name: 'ember-cli-image-cropper',
 
-  included: function(app) {
-      this._super.included(app);
-
-      if (process.env.EMBER_CLI_FASTBOOT !== 'true') {
-        app.import(app.bowerDirectory + '/cropper/dist/cropper.min.js');
+  options: {
+    nodeAssets: {
+      cropper: function() {
+        return {
+          enabled: !process.env.EMBER_CLI_FASTBOOT,
+          srcDir: 'dist',
+          import: [
+            'cropper.min.js',
+            'cropper.min.css'
+          ],
+        };
       }
-
-      app.import(app.bowerDirectory + '/cropper/dist/cropper.min.css');
+    }
   }
 };
