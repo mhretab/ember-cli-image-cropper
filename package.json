@@ -26,7 +26,8 @@
     "cropper": "^3.0.0-rc.1",
     "ember-cli-babel": "^6.0.0",
     "ember-cli-htmlbars": "^1.1.1",
-    "ember-cli-node-assets": "^0.2.2"
+    "ember-cli-node-assets": "^0.2.2",
+    "fastboot-transform": "^0.1.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
