@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-image-cropper",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "An Ember CLI addon that wraps the jQuery Cropper into an ember component.",
   "license": "MIT",
   "author": "",
