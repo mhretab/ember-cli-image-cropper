@@ -24,7 +24,7 @@ $ ember install:addon ember-cli-image-cropper
 
 The component initialises cropper when the image is loaded. To use it, extend the component and change the default to your preference. Currently no methods are provided by the addon. To do this you have to use the default cropper methods. For more about available methods checkout [Cropper](https://github.com/fengyuanchen/cropper).
 
-An example below show how to extend the component and get the croped canvas area.
+An example below show how to extend the component and get the cropped canvas area.
 
 ### Example:
 
