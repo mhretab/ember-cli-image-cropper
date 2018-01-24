@@ -38,53 +38,27 @@ export default Ember.Component.extend({
   dragEnd: null,
   zoomin: null,
   zoomout: null,
-
   //initialize cropper on did insert element
-  initImageCropper: Ember.on('didRender', function() {
-    var _this = this;
-      _this.$(_this.get('cropperContainer')).cropper({
-        aspectRatio: _this.get('aspectRatio'),
-        crop: _this.get('crop'),
-        preview: _this.get('previewClass'),
-        viewMode: _this.get('viewMode'),
-        dragMode: _this.get('dragMode'),
-        responsive: _this.get('responsive'),
-        center: _this.get('center'),
-        checkCrossOrigin: _this.get('checkCrossOrigin'),
-        toggleDragModeOnDblclick: _this.get('toggleDragModeOnDblclick'),
-        background: _this.get('background'),
-        modal: _this.get('modal'),
-        guides: _this.get('guides'),
-        highlight: _this.get('highlight'),
-        autoCrop: _this.get('autoCrop'),
-        autoCropArea: _this.get('autoCropArea'),
-        dragDrop: _this.get('dragDrop'),
-        movable: _this.get('movable'),
-        resizable: _this.get('resizable'),
-        zoomable: _this.get('zoomable'),
-        zoomOnWheel: _this.get('zoomOnWheel'),
-        zoomOnTouch: _this.get('zoomOnTouch'),
-        cropBoxMovable: _this.get('cropBoxMovable'),
-        cropBoxResizable: _this.get('cropBoxResizable'),
-        rotateable: _this.get('rotateable'),
-        minContainerWidth: _this.get('minContainerWidth'),
-        minContainerHeight: _this.get('minContainerHeight'),
-        minCropBoxWidth: _this.get('minCropBoxWidth'),
-        minCropBoxHeight: _this.get('minCropBoxHeight'),
-        build: _this.get('build'),
-        built: _this.get('built'),
-        dragStart: _this.get('dragStart'),
-        dragMove: _this.get('dragMove'),
-        dragEnd: _this.get('dragEnd'),
-        zoomin: _this.get('zoomin'),
-        zoomout: _this.get('zoomout')
-      });
-  }),
-
-  teardownCropper: Ember.on('willDestroyElement', function() {
+  didRender(){
+    let properties = this.getProperties('cropperContainer', 
+      'aspectRatio', 'crop', 'previewClass', 'viewMode', 
+      'dragMode', 'responsive', 'center', 'checkCrossOrigin', 
+      'toggleDragModeOnDbclick', 'background', 'modal', 'guides', 
+      'highlight', 'autoCrop', 'autoCropArea', 'dragDrop', 
+      'movable', 'resizable', 'zoomable', 'zoomOnWheel', 
+      'zoomOnTouch', 'cropBoxMovable', 'cropBoxResizable', 
+      'rotateable', 'minContainer', 'minContainerHeight', 
+      'minCropBoxWidth', 'minCropBoxHeight', 'build',
+      'built', 'dragStart', 'dragMove', 'dragEnd', 'zoomin', 
+      'zoomout');
+    properties['preview'] = properties['previewClass'];
+    delete properties['previewClass'];
+    this.$(properties['cropperContainer']).cropper(properties);
+  },
+  willDestroyElement() {
     let cropperElment = this.$(this.get('cropperContainer'));
     if(cropperElment.data('cropper')) {
       cropperElment.cropper('destroy');
     }
-  })
+  }
 });
