@@ -8,11 +8,10 @@ export default imageCropper.extend({
   cropperContainer: '.cropper-container > img',
   previewClass: '.img-preview',
   croppedAvatar: null,
-
   actions: {
-    getCroppedAvatar: function() {
-      var container = this.$(this.get('cropperContainer'));
-      var croppedImage = container.cropper('getCroppedCanvas');
+    getCroppedAvatar() {
+      let cropper = this.get('cropper'),
+          croppedImage = cropper.getCroppedCanvas();
       this.set('croppedAvatar', croppedImage);
     }
   }
