@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Cropper from 'cropperjs';
 
 export default Ember.Component.extend({
   //cropper configs
@@ -53,12 +54,14 @@ export default Ember.Component.extend({
       'zoomout');
     properties['preview'] = properties['previewClass'];
     delete properties['previewClass'];
-    this.$(properties['cropperContainer']).cropper(properties);
+    let image = document.querySelector(
+      properties['cropperContainer']);
+    this.set('cropper', new Cropper(image, properties));
   },
   willDestroyElement() {
-    let cropperElment = this.$(this.get('cropperContainer'));
-    if(cropperElment.data('cropper')) {
-      cropperElment.cropper('destroy');
+    let cropper = this.get('cropper');
+    if(cropper.data('cropper')) {
+      cropper.destroy();
     }
   }
 });
