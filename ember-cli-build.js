@@ -14,8 +14,5 @@ module.exports = function(defaults) {
     This build file does *not* influence how the addon or the app using it
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
-  app.import('vendor/cropper.min.js');
-  app.import('vendor/cropper.min.css');
-  app.import('vendor/shims/cropperjs.js');
   return app.toTree();
 };
