@@ -40,7 +40,7 @@ export default Ember.Component.extend({
   zoomin: null,
   zoomout: null,
   //initialize cropper on did insert element
-  didRender(){
+  didInsertElement(){
     let properties = this.getProperties('cropperContainer', 
       'aspectRatio', 'crop', 'previewClass', 'viewMode', 
       'dragMode', 'responsive', 'center', 'checkCrossOrigin', 
