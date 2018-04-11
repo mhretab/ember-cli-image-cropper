@@ -60,7 +60,7 @@ export default Ember.Component.extend({
   },
   willDestroyElement() {
     let cropper = this.get('cropper');
-    if(cropper.data('cropper')) {
+    if(cropper['data']) {
       cropper.destroy();
     }
   }
