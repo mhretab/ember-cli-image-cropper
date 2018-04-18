@@ -1,21 +1,22 @@
-import {
-  moduleForComponent,
-  test
-} from 'ember-qunit';
+import { moduleForComponent, test } from 'ember-qunit';
+import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('image-cropper', {
-  // specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
+  integration: true
 });
 
 test('it renders', function(assert) {
-  assert.expect(2);
-
-  // creates the component instance
-  var component = this.subject();
-  assert.equal(component._state, 'preRender');
-
-  // renders the component to the page
-  this.render();
-  assert.equal(component._state, 'inDOM');
+  assert.expect(1);
+  this.set('cropper', null);
+  this.render(hbs`<div class="cropper-container">
+                    <img src="http://rockntech.com.br/wp-content/uploads/2013/07/hermione-granger.jpg">
+                  </div>
+                  <div class="cropper-preview">
+                  </div>
+                  <div class="cropped-avatar">
+                    {{croppedAvatar}}
+                  </div>
+                  {{image-cropper cropper=cropper}}`);
+  assert.equal(this.get('cropper').url, 
+    "http://rockntech.com.br/wp-content/uploads/2013/07/hermione-granger.jpg");
 });
