@@ -41,6 +41,7 @@ export default Ember.Component.extend({
   zoomout: null,
   //initialize cropper on did insert element
   didInsertElement(){
+    this._super(...arguments);
     let properties = this.getProperties('cropperContainer', 
       'aspectRatio', 'crop', 'previewClass', 'viewMode', 
       'dragMode', 'responsive', 'center', 'checkCrossOrigin', 
@@ -59,6 +60,7 @@ export default Ember.Component.extend({
     this.set('cropper', new Cropper(image, properties));
   },
   willDestroyElement() {
+    this._super(...arguments);
     let cropper = this.get('cropper');
     if(cropper['data']) {
       cropper.destroy();
