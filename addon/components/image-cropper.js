@@ -42,21 +42,47 @@ export default Ember.Component.extend({
   //initialize cropper on did insert element
   didInsertElement(){
     this._super(...arguments);
-    let properties = this.getProperties('cropperContainer', 
-      'aspectRatio', 'crop', 'previewClass', 'viewMode', 
-      'dragMode', 'responsive', 'center', 'checkCrossOrigin', 
-      'toggleDragModeOnDbclick', 'background', 'modal', 'guides', 
-      'highlight', 'autoCrop', 'autoCropArea', 'dragDrop', 
-      'movable', 'resizable', 'zoomable', 'zoomOnWheel', 
-      'zoomOnTouch', 'cropBoxMovable', 'cropBoxResizable', 
-      'rotateable', 'minContainer', 'minContainerHeight', 
-      'minCropBoxWidth', 'minCropBoxHeight', 'build',
-      'built', 'dragStart', 'dragMove', 'dragEnd', 'zoomin', 
-      'zoomout');
+    let properties = this.getProperties(
+      'cropperContainer',
+      'aspectRatio',
+      'crop',
+      'previewClass',
+      'viewMode',
+      'dragMode',
+      'responsive',
+      'center',
+      'checkCrossOrigin',
+      'toggleDragModeOnDblclick',
+      'background',
+      'modal',
+      'guides',
+      'highlight',
+      'autoCrop',
+      'autoCropArea',
+      'dragDrop',
+      'movable',
+      'resizable',
+      'zoomable',
+      'zoomOnWheel',
+      'zoomOnTouch',
+      'cropBoxMovable',
+      'cropBoxResizable',
+      'rotateable',
+      'minContainerWidth',
+      'minContainerHeight',
+      'minCropBoxWidth',
+      'minCropBoxHeight',
+      'build',
+      'built',
+      'dragStart',
+      'dragMove',
+      'dragEnd',
+      'zoomin',
+      'zoomout'
+    );
     properties['preview'] = properties['previewClass'];
     delete properties['previewClass'];
-    let image = document.querySelector(
-      properties['cropperContainer']);
+    let image = document.querySelector(properties['cropperContainer']);
     this.set('cropper', new Cropper(image, properties));
   },
   willDestroyElement() {
