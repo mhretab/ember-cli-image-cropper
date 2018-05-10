@@ -1,8 +1,8 @@
 # Ember CLI Image Cropper [![Build Status](https://travis-ci.org/mhretab/ember-cli-image-cropper.svg?branch=master)](https://travis-ci.org/mhretab/ember-cli-image-cropper)
 
-This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component. 
+This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component.
 
-It requires cropper 
+It requires cropper
 
 ## Installation
 
@@ -91,5 +91,6 @@ dragMove: null,
 dragEnd: null,
 zoomin: null,
 zoomout: null,
+ready: null
 ```
 For more options and methods, please check cropper's [README](https://github.com/fengyuanchen/cropper#options_).
