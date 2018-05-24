@@ -91,6 +91,7 @@ dragMove: null,
 dragEnd: null,
 zoomin: null,
 zoomout: null,
-ready: null
+ready: null,
+data: null
 ```
 For more options and methods, please check cropper's [README](https://github.com/fengyuanchen/cropper#options_).
