@@ -40,6 +40,7 @@ export default Ember.Component.extend({
   zoomin: null,
   zoomout: null,
   ready: null,
+  data: null,
   //initialize cropper on did insert element
   didInsertElement(){
     this._super(...arguments);
@@ -81,6 +82,7 @@ export default Ember.Component.extend({
       'zoomin',
       'zoomout',
       'ready',
+      'data'
     );
     properties['preview'] = properties['previewClass'];
     delete properties['previewClass'];
