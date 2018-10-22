@@ -43,8 +43,7 @@ export default imageCropper.extend({
 
   actions: {
     getCroppedAvatar: function() {
-      var container = this.$(this.get('cropperContainer'));
-      var croppedImage = container.cropper('getCroppedCanvas');
+      var croppedImage = this.get('cropper').getCroppedCanvas();
       this.set('croppedAvatar', croppedImage);
     }
   }
