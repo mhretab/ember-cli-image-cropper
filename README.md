@@ -30,9 +30,9 @@ An example below show how to extend the component and get the cropped canvas are
 
 ```javascript
 // app/components/avatar-cropper.js
-import imageCropper from 'ember-cli-image-cropper/components/image-cropper';
+import ImageCropper from 'ember-cli-image-cropper/components/image-cropper';
 
-export default imageCropper.extend({
+export default ImageCropper.extend({
   //override default options of cropper
   aspectRatio: 1,
   minCropBoxWidth: 100,
@@ -42,7 +42,7 @@ export default imageCropper.extend({
   croppedAvatar: null,
 
   actions: {
-    getCroppedAvatar: function() {
+    getCroppedAvatar() {
       var croppedImage = this.get('cropper').getCroppedCanvas();
       this.set('croppedAvatar', croppedImage);
     }
