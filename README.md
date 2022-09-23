@@ -1,3 +1,5 @@
+## ⚠️ This repo is deprecated please use [ember-cropperjs](https://github.com/danielthall/ember-cropperjs) instead. ⚠️
+
 # Ember CLI Image Cropper [![Build Status](https://travis-ci.org/mhretab/ember-cli-image-cropper.svg?branch=master)](https://travis-ci.org/mhretab/ember-cli-image-cropper)
 
 This Ember CLI addon that wraps the jQuery [Cropper](https://github.com/fengyuanchen/cropper) into an ember component.
@@ -13,6 +15,7 @@ For ember-cli 1.13.1 and above. use ember-cli-image-cropper version 0.0.7 and be
 $ ember install ember-cli-image-cropper
 
 ```
+
 For ember-cli 0.2.7 and below use ember-cli-image-cropper version 0.0.6 and install it using:
 
 ```sh
@@ -30,23 +33,23 @@ An example below show how to extend the component and get the cropped canvas are
 
 ```javascript
 // app/components/avatar-cropper.js
-import ImageCropper from 'ember-cli-image-cropper/components/image-cropper';
+import ImageCropper from "ember-cli-image-cropper/components/image-cropper";
 
 export default ImageCropper.extend({
   //override default options of cropper
   aspectRatio: 1,
   minCropBoxWidth: 100,
   minCropBoxHeight: 100,
-  cropperContainer: '.cropper-container > img',
-  previewClass: '.img-preview',
+  cropperContainer: ".cropper-container > img",
+  previewClass: ".img-preview",
   croppedAvatar: null,
 
   actions: {
     getCroppedAvatar() {
-      var croppedImage = this.get('cropper').getCroppedCanvas();
-      this.set('croppedAvatar', croppedImage);
-    }
-  }
+      var croppedImage = this.get("cropper").getCroppedCanvas();
+      this.set("croppedAvatar", croppedImage);
+    },
+  },
 });
 ```
 
@@ -93,4 +96,5 @@ zoomout: null,
 ready: null,
 data: null
 ```
+
 For more options and methods, please check cropper's [README](https://github.com/fengyuanchen/cropper#options_).
